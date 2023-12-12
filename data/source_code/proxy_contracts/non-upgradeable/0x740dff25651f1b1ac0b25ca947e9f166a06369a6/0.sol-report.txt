@@ -1,0 +1,12 @@
+'solc --version' running
+'solc 0.sol --combined-json abi,ast,bin,bin-runtime,srcmap,srcmap-runtime,userdoc,devdoc,hashes --allow-paths .,/home/mokita/cooking/smart_contracts/data/source_code/upgraded/0x740dff25651f1b1ac0b25ca947e9f166a06369a6' running
+Compilation warnings/errors on 0.sol:
+Warning: SPDX license identifier not provided in source file. Before publishing, consider adding a comment containing "SPDX-License-Identifier: <SPDX-License>" to each source file. Use "SPDX-License-Identifier: UNLICENSED" for non-open-source code. Please see https://spdx.org for more information.
+--> 0.sol
+
+
+[92m
+Proxy (0.sol#518-571) is a proxy, but doesn't seem upgradeable.
+ERC1967Proxy (0.sol#584-609) is a proxy, but doesn't seem upgradeable.
+Reference: https://github.com/crytic/slither/wiki/Upgradeability-Checks#proxy-patterns[0m
+0.sol analyzed (6 contracts with 1 detectors), 2 result(s) found

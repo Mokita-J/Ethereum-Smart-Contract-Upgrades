@@ -1,0 +1,24 @@
+'solc --version' running
+'solc 0.sol --combined-json abi,ast,bin,bin-runtime,srcmap,srcmap-runtime,userdoc,devdoc,hashes,compact-format --allow-paths .,/home/mokita/cooking/smart_contracts/data/source_code/upgraded/0xc89c2e6fe008592d6a787efd02db7fdb8ea64020' running
+[92m
+Proxy (0.sol#392-460) is a proxy, but doesn't seem upgradeable.
+ERC1967Proxy (0.sol#658-676) is an upgradeable proxy.
+StorageSlot.getAddressSlot(_IMPLEMENTATION_SLOT).value is declared in the proxy.
+ uses Unstructured Storage
+ implements EIP-1822 using slot from ERC-1967 (i.e. OpenZeppelin UUPS)
+Found compatibility checks in all upgrade functions.
+To remove upgradeability, delete upgradeTo from ChildOfProxiable
+TransparentUpgradeableProxy (0.sol#730-822) is an upgradeable proxy.
+StorageSlot.getAddressSlot(_IMPLEMENTATION_SLOT).value is declared in the proxy.
+ uses Unstructured Storage
+ uses Transparent Proxy pattern
+Found compatibility checks in all upgrade functions.
+To remove upgradeability, delete upgradeTo from ChildOfProxiable
+AdminUpgradeabilityProxy (0.sol#921-923) is an upgradeable proxy.
+StorageSlot.getAddressSlot(_IMPLEMENTATION_SLOT).value is declared in the proxy.
+ uses Unstructured Storage
+ uses Transparent Proxy pattern
+Found compatibility checks in all upgrade functions.
+To remove upgradeability, delete upgradeTo from ChildOfProxiable
+Reference: https://github.com/crytic/slither/wiki/Upgradeability-Checks#proxy-patterns[0m
+0.sol analyzed (14 contracts with 1 detectors), 4 result(s) found

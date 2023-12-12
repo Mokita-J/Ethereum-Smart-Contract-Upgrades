@@ -1,0 +1,19 @@
+'solc --version' running
+'solc 0.sol --combined-json abi,ast,bin,bin-runtime,srcmap,srcmap-runtime,userdoc,devdoc,hashes,compact-format --allow-paths .,/home/mokita/cooking/smart_contracts/data/source_code/upgraded/0xb0e37d647ae5a48b73e8b80e1e24a62fc52b24ec' running
+Compilation warnings/errors on 0.sol:
+0.sol:1:1: Warning: Source file does not specify required compiler version!Consider adding "pragma solidity ^0.4.23;"
+contract OwnedUpgradeabilityStorage {
+^ (Relevant source part starts here and spans across multiple lines).
+
+[92m
+Proxy (0.sol#43-77) is a proxy, but doesn't seem upgradeable.
+OwnedUpgradeabilityProxy (0.sol#79-148) is an upgradeable proxy.
+_implementation was found in a different contract.
+_implementation is an address state variable.
+Found compatibility checks in all upgrade functions.
+OwnableDelegateProxy (0.sol#151-162) is an upgradeable proxy.
+_implementation was found in a different contract.
+_implementation is an address state variable.
+Found compatibility checks in all upgrade functions.
+Reference: https://github.com/crytic/slither/wiki/Upgradeability-Checks#proxy-patterns[0m
+0.sol analyzed (4 contracts with 1 detectors), 3 result(s) found

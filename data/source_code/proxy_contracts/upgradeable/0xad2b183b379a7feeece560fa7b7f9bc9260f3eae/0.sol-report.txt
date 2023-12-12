@@ -1,0 +1,57 @@
+'solc --version' running
+'solc 0.sol --combined-json abi,ast,bin,bin-runtime,srcmap,srcmap-runtime,userdoc,devdoc,hashes --allow-paths .,/home/mokita/cooking/smart_contracts/data/source_code/upgraded/0xad2b183b379a7feeece560fa7b7f9bc9260f3eae' running
+Compilation warnings/errors on 0.sol:
+Warning: SPDX license identifier not provided in source file. Before publishing, consider adding a comment containing "SPDX-License-Identifier: <SPDX-License>" to each source file. Use "SPDX-License-Identifier: UNLICENSED" for non-open-source code. Please see https://spdx.org for more information.
+--> 0.sol
+
+
+Traceback (most recent call last):
+  File "/home/mokita/cooking/temp/USCHunt/.venv/lib/python3.10/site-packages/slither_analyzer-0.9.1-py3.10.egg/slither/__main__.py", line 867, in main_impl
+    ) = process_all(filename, args, detector_classes, printer_classes)
+  File "/home/mokita/cooking/temp/USCHunt/.venv/lib/python3.10/site-packages/slither_analyzer-0.9.1-py3.10.egg/slither/__main__.py", line 97, in process_all
+    ) = process_single(compilation, args, detector_classes, printer_classes)
+  File "/home/mokita/cooking/temp/USCHunt/.venv/lib/python3.10/site-packages/slither_analyzer-0.9.1-py3.10.egg/slither/__main__.py", line 77, in process_single
+    return _process(slither, detector_classes, printer_classes)
+  File "/home/mokita/cooking/temp/USCHunt/.venv/lib/python3.10/site-packages/slither_analyzer-0.9.1-py3.10.egg/slither/__main__.py", line 127, in _process
+    detector_results = slither.run_detectors()
+  File "/home/mokita/cooking/temp/USCHunt/.venv/lib/python3.10/site-packages/slither_analyzer-0.9.1-py3.10.egg/slither/slither.py", line 216, in run_detectors
+    results = [d.detect() for d in self._detectors]
+  File "/home/mokita/cooking/temp/USCHunt/.venv/lib/python3.10/site-packages/slither_analyzer-0.9.1-py3.10.egg/slither/slither.py", line 216, in <listcomp>
+    results = [d.detect() for d in self._detectors]
+  File "/home/mokita/cooking/temp/USCHunt/.venv/lib/python3.10/site-packages/slither_analyzer-0.9.1-py3.10.egg/slither/detectors/abstract_detector.py", line 185, in detect
+    for r in [output.data for output in self._detect()]:
+  File "/home/mokita/cooking/temp/USCHunt/.venv/lib/python3.10/site-packages/slither_analyzer-0.9.1-py3.10.egg/slither/detectors/proxy/proxy_patterns.py", line 441, in _detect
+    if proxy_features.is_upgradeable_proxy:
+  File "/home/mokita/cooking/temp/USCHunt/.venv/lib/python3.10/site-packages/slither_analyzer-0.9.1-py3.10.egg/slither/detectors/proxy/proxy_features.py", line 66, in is_upgradeable_proxy
+    return self.contract.is_upgradeable_proxy
+  File "/home/mokita/cooking/temp/USCHunt/.venv/lib/python3.10/site-packages/slither_analyzer-0.9.1-py3.10.egg/slither/core/declarations/contract.py", line 1338, in is_upgradeable_proxy
+    self._delegate_variable) = self.find_setter_in_contract(self, self._delegate_variable,
+  File "/home/mokita/cooking/temp/USCHunt/.venv/lib/python3.10/site-packages/slither_analyzer-0.9.1-py3.10.egg/slither/core/declarations/contract.py", line 2912, in find_setter_in_contract
+    setter = lib_diamond.get_function_from_name("diamondCut")
+AttributeError: 'list' object has no attribute 'get_function_from_name'
+Error in 0.sol
+Traceback (most recent call last):
+  File "/home/mokita/cooking/temp/USCHunt/.venv/lib/python3.10/site-packages/slither_analyzer-0.9.1-py3.10.egg/slither/__main__.py", line 867, in main_impl
+    ) = process_all(filename, args, detector_classes, printer_classes)
+  File "/home/mokita/cooking/temp/USCHunt/.venv/lib/python3.10/site-packages/slither_analyzer-0.9.1-py3.10.egg/slither/__main__.py", line 97, in process_all
+    ) = process_single(compilation, args, detector_classes, printer_classes)
+  File "/home/mokita/cooking/temp/USCHunt/.venv/lib/python3.10/site-packages/slither_analyzer-0.9.1-py3.10.egg/slither/__main__.py", line 77, in process_single
+    return _process(slither, detector_classes, printer_classes)
+  File "/home/mokita/cooking/temp/USCHunt/.venv/lib/python3.10/site-packages/slither_analyzer-0.9.1-py3.10.egg/slither/__main__.py", line 127, in _process
+    detector_results = slither.run_detectors()
+  File "/home/mokita/cooking/temp/USCHunt/.venv/lib/python3.10/site-packages/slither_analyzer-0.9.1-py3.10.egg/slither/slither.py", line 216, in run_detectors
+    results = [d.detect() for d in self._detectors]
+  File "/home/mokita/cooking/temp/USCHunt/.venv/lib/python3.10/site-packages/slither_analyzer-0.9.1-py3.10.egg/slither/slither.py", line 216, in <listcomp>
+    results = [d.detect() for d in self._detectors]
+  File "/home/mokita/cooking/temp/USCHunt/.venv/lib/python3.10/site-packages/slither_analyzer-0.9.1-py3.10.egg/slither/detectors/abstract_detector.py", line 185, in detect
+    for r in [output.data for output in self._detect()]:
+  File "/home/mokita/cooking/temp/USCHunt/.venv/lib/python3.10/site-packages/slither_analyzer-0.9.1-py3.10.egg/slither/detectors/proxy/proxy_patterns.py", line 441, in _detect
+    if proxy_features.is_upgradeable_proxy:
+  File "/home/mokita/cooking/temp/USCHunt/.venv/lib/python3.10/site-packages/slither_analyzer-0.9.1-py3.10.egg/slither/detectors/proxy/proxy_features.py", line 66, in is_upgradeable_proxy
+    return self.contract.is_upgradeable_proxy
+  File "/home/mokita/cooking/temp/USCHunt/.venv/lib/python3.10/site-packages/slither_analyzer-0.9.1-py3.10.egg/slither/core/declarations/contract.py", line 1338, in is_upgradeable_proxy
+    self._delegate_variable) = self.find_setter_in_contract(self, self._delegate_variable,
+  File "/home/mokita/cooking/temp/USCHunt/.venv/lib/python3.10/site-packages/slither_analyzer-0.9.1-py3.10.egg/slither/core/declarations/contract.py", line 2912, in find_setter_in_contract
+    setter = lib_diamond.get_function_from_name("diamondCut")
+AttributeError: 'list' object has no attribute 'get_function_from_name'
+

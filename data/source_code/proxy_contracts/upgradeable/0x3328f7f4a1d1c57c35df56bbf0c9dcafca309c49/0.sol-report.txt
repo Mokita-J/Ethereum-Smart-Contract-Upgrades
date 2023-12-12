@@ -1,0 +1,21 @@
+'solc --version' running
+'solc 0.sol --combined-json abi,ast,bin,bin-runtime,srcmap,srcmap-runtime,userdoc,devdoc,hashes,compact-format --allow-paths .,/home/mokita/cooking/smart_contracts/data/source_code/upgraded/0x3328f7f4a1d1c57c35df56bbf0c9dcafca309c49' running
+Compilation warnings/errors on 0.sol:
+Warning: SPDX license identifier not provided in source file. Before publishing, consider adding a comment containing "SPDX-License-Identifier: <SPDX-License>" to each source file. Use "SPDX-License-Identifier: UNLICENSED" for non-open-source code. Please see https://spdx.org for more information.
+--> 0.sol
+
+
+[92m
+Proxy (0.sol#686-756) is a proxy, but doesn't seem upgradeable.
+ERC1967Proxy (0.sol#770-787) is a proxy, but doesn't seem upgradeable.
+BeaconProxy (0.sol#803-846) is an upgradeable proxy.
+_implementation was found in a different contract.
+_implementation is an address state variable.
+UpgradeableBeacon._implementation (0.sol#861) gets value from a cross-contract call: IBeacon(_getBeacon()).implementation()
+UpgradeableBeacon appears to be a Beacon contract for the proxy
+The address of UpgradeableBeacon comes from the value of ERC1967Upgrade._getBeacon(). (0.sol#554)
+Found compatibility checks in all upgrade functions.
+To remove upgradeability, delete upgradeTo from UpgradeableBeacon
+TransparentUpgradeableProxy (0.sol#967-1102) is a proxy, but doesn't seem upgradeable.
+Reference: https://github.com/crytic/slither/wiki/Upgradeability-Checks#proxy-patterns[0m
+0.sol analyzed (15 contracts with 1 detectors), 4 result(s) found

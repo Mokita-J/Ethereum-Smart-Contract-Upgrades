@@ -1,0 +1,8 @@
+'solc --version' running
+'solc 0.sol --combined-json abi,ast,bin,bin-runtime,srcmap,srcmap-runtime,userdoc,devdoc,hashes --allow-paths .,/home/mokita/cooking/smart_contracts/data/source_code/upgraded/0x0000000000eb00cc145ab86782714dd21b08d1cd' running
+[92m
+Proxy (0.sol#649-719) is a proxy, but doesn't seem upgradeable.
+ERC1967Proxy (0.sol#727-748) is a proxy, but doesn't seem upgradeable.
+TransparentUpgradeableProxy (0.sol#800-882) is a proxy, but doesn't seem upgradeable.
+Reference: https://github.com/crytic/slither/wiki/Upgradeability-Checks#proxy-patterns[0m
+0.sol analyzed (12 contracts with 1 detectors), 3 result(s) found

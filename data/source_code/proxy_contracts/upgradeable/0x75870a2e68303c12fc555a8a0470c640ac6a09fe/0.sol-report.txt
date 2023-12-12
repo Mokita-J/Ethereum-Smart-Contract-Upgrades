@@ -1,0 +1,32 @@
+'solc --version' running
+'solc 0.sol --combined-json abi,ast,bin,bin-runtime,srcmap,srcmap-runtime,userdoc,devdoc,hashes,compact-format --allow-paths .,/home/mokita/cooking/smart_contracts/data/source_code/upgraded/0x75870a2e68303c12fc555a8a0470c640ac6a09fe' running
+Compilation warnings/errors on 0.sol:
+Warning: SPDX license identifier not provided in source file. Before publishing, consider adding a comment containing "SPDX-License-Identifier: <SPDX-License>" to each source file. Use "SPDX-License-Identifier: UNLICENSED" for non-open-source code. Please see https://spdx.org for more information.
+--> 0.sol
+
+
+[92m
+Proxy (0.sol#391-459) is a proxy, but doesn't seem upgradeable.
+BeaconProxy (0.sol#659-703) is an upgradeable proxy.
+_implementation was found in a different contract.
+_implementation is an address state variable.
+UpgradeableBeacon._implementation (0.sol#746) gets value from a cross-contract call: IBeacon(_getBeacon()).implementation()
+UpgradeableBeacon appears to be a Beacon contract for the proxy
+The address of UpgradeableBeacon comes from the value of ERC1967Upgrade._getBeacon(). (0.sol#627)
+Found compatibility checks in all upgrade functions.
+To remove upgradeability, delete upgradeTo from UpgradeableBeacon
+ERC1967Proxy (0.sol#715-733) is a proxy, but doesn't seem upgradeable.
+TransparentUpgradeableProxy (0.sol#820-912) is an upgradeable proxy.
+StorageSlot.getAddressSlot(_IMPLEMENTATION_SLOT).value is declared in the proxy.
+ uses Unstructured Storage
+ implements EIP-1967
+ uses Transparent Proxy pattern
+Found compatibility checks in all upgrade functions.
+AdminUpgradeabilityProxy (0.sol#994-996) is an upgradeable proxy.
+StorageSlot.getAddressSlot(_IMPLEMENTATION_SLOT).value is declared in the proxy.
+ uses Unstructured Storage
+ implements EIP-1967
+ uses Transparent Proxy pattern
+Found compatibility checks in all upgrade functions.
+Reference: https://github.com/crytic/slither/wiki/Upgradeability-Checks#proxy-patterns[0m
+0.sol analyzed (13 contracts with 1 detectors), 5 result(s) found
