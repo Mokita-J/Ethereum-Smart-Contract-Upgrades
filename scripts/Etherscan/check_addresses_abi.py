@@ -35,7 +35,7 @@ def main():
                 res = eth.get_contract_abi(contract_address)
                 abi = json.loads(res)
                 check_and_write_events(out, contract_address, abi)
-                sleep(0.15)
+                sleep(1/REQUESTS_PER_SECOND)
 
 if __name__ == "__main__":
     main()

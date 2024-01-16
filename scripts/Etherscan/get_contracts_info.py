@@ -49,15 +49,14 @@ def process_source_code(code, contract_address, parent_path, index):
 def main():
     with open(os.path.join(DATA_DIR, INPUT_FILE)) as csv_file:
         csv_reader = csv.reader(csv_file, delimiter='\n')
-        for index, row in enumerate(csv_reader, start=1):
-            print(f'{index}/{total} ({(index * 100 / total):.2f}%)')
+        for index, row in enumerate(csv_reader):
             contract_address = row[0]
             res = eth.get_contract_source_code(contract_address)
 
             for index, code in enumerate(res):
                 process_source_code(code, contract_address, OUTPUT_DIR, index)
                 
-            sleep(1/API_KEY)
+            sleep(1/REQUESTS_PER_SECOND)
 
 if __name__ == "__main__":
     main()
