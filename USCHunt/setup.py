@@ -16,6 +16,7 @@ setup(
         "pycryptodome>=3.4.6",
         "crytic-compile>=0.2.4",
         # "crytic-compile@git+https://github.com/crytic/crytic-compile.git@master#egg=crytic-compile",
+        "pysha3>=1.0.2",
     ],
     extras_require={
         "dev": [
